@@ -19,7 +19,7 @@ func TestStatus(t *testing.T) {
 	}
 
 	for _, table := range tables {
-		code, _ := Status(table.response)
+		code, _ := GetStatus(table.response)
 		if code != table.code {
 			t.Errorf("Up/Down Code of %d was incorrect, got: %d, want: %d", table.response, code, table.code)
 		}
